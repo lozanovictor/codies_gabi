@@ -3,19 +3,23 @@
 #include <math.h>
 
 double main() {
-    double largura=0;
-    double comprimento=0;
-    double area=0;
+    float largura=0;
+    float comprimento=0;
+    float area=0;
     printf("Calculo da area de um retangulo\n");
     printf("Entre a largura:\n");
-    while (scanf("%f", &largura)<=0){
+    scanf("%f", &largura);
+    while (largura<=0){
         printf("Valor invalido, impossivel de calcular, por favor insira um valor valido:\n");
+        scanf("%f", &largura);
     }
     printf("Entre a comprimento:\n");
-    while (scanf("%f", &comprimento)<=0){
+    scanf("%f", &comprimento);
+    while (comprimento<=0){
         printf("Valor invalido, impossivel de calcular, por favor insira um valor valido:\n");
+        scanf("%f", &comprimento);
     }
     area = largura * comprimento;
-    printf("Area do retangulo: %f", &area);
+    printf("Area do retangulo: %f", area);
     return 0;
 }
